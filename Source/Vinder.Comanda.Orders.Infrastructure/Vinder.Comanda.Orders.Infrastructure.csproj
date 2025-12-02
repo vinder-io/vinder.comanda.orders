@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Vinder.Internal.Infrastructure" Version="1.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Vinder.Comanda.Orders.Domain/Vinder.Comanda.Orders.Domain.csproj" />
+    <ProjectReference Include="../Vinder.Comanda.Orders.Application/Vinder.Comanda.Orders.Application.csproj" />
+    <ProjectReference Include="..\Vinder.Comanda.Orders.CrossCutting\Vinder.Comanda.Orders.CrossCutting.csproj" />
+  </ItemGroup>
+
+</Project>
