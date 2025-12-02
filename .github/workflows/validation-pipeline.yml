@@ -17,6 +17,9 @@ jobs:
         with:
           dotnet-version: '9.0.x'
 
+      - name: check code formatting
+        run: dotnet format --verify-no-changes
+
       - name: restore dependencies
         run: dotnet restore
 
@@ -25,3 +28,6 @@ jobs:
 
       - name: run tests
         run: dotnet test --no-build --configuration Release --verbosity normal
+
+      - name: validate docker build
+        run: docker build --pull -t vinder.comanda.orders:validation-${{ github.event.pull_request.number }} .
