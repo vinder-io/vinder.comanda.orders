@@ -9,6 +9,9 @@ public sealed record OrdersFetchParameters :
     public string? Priority { get; set; }
     public string? Fulfillment { get; set; }
 
+    public string? MerchantId { get; set; }
+    public string? ConsumerId { get; set; }
+
     public PaginationFilters? Pagination { get; set; }
     public SortFilters? Sort { get; set; }
 
