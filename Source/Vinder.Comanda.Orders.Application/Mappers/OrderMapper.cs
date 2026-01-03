@@ -21,6 +21,9 @@ public static class OrderMapper
         Id = parameters.Id,
         Code = parameters.Code,
 
+        MerchantId = parameters.MerchantId,
+        ConsumerId = parameters.ConsumerId,
+
         Pagination = parameters.Pagination,
         Sort = parameters.Sort,
 
