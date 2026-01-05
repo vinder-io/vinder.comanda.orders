@@ -59,4 +59,11 @@ public sealed class OrdersController(IDispatcher dispatcher) : ControllerBase
                 StatusCode(StatusCodes.Status404NotFound, result.Error)
         };
     }
+
+    // test endpoint to verify that the deployment works
+    [HttpGet("hello-world")]
+    public async ValueTask<IActionResult> HelloWorldAsync()
+    {
+        return Ok("Hello, World!");
+    }
 }
