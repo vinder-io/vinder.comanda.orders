@@ -11,7 +11,7 @@ public static class SpecificationsExtension
             options.HideDarkModeToggle = true;
             options.HideClientButton = true;
 
-            options.WithTitle("Vinder Comanda Payments API");
+            options.WithTitle("Vinder Comanda Orders API");
             options.WithClassicLayout();
         });
     }
