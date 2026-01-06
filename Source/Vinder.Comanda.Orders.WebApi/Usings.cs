@@ -12,9 +12,7 @@ global using Vinder.Comanda.Orders.Application.Payloads.Order;
 global using Vinder.Comanda.Orders.Application.Payloads;
 
 global using Vinder.Comanda.Orders.Infrastructure.IoC.Extensions;
-
 global using Vinder.Comanda.Orders.CrossCutting.Configurations;
-global using Vinder.Comanda.Orders.CrossCutting.Constants;
 
 global using Vinder.Dispatcher.Contracts;
 global using Vinder.IdentityProvider.Sdk.Extensions;

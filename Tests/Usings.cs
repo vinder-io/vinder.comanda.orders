@@ -31,7 +31,6 @@ global using Vinder.Comanda.Orders.Application.Payloads;
 global using Vinder.Comanda.Orders.Application.Payloads.Order;
 
 global using Vinder.Comanda.Orders.TestSuite.Fixtures;
-global using Vinder.Comanda.Orders.CrossCutting.Constants;
 
 global using Vinder.Internal.Essentials.Patterns;
 global using Vinder.Internal.Essentials.Primitives;
