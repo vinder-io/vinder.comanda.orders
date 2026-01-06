@@ -1,11 +1,11 @@
 ﻿namespace Vinder.Comanda.Orders.WebApi.Controllers;
 
 [ApiController]
+[Authorize]
 [Route("api/v1/orders")]
 public sealed class OrdersController(IDispatcher dispatcher) : ControllerBase
 {
     [HttpGet]
-    [Authorize(Roles = Permissions.ViewOrders)]
     public async Task<IActionResult> GetOrdersAsync([FromQuery] OrdersFetchParameters request, CancellationToken cancellation)
     {
         var result = await dispatcher.DispatchAsync(request, cancellation);
@@ -28,7 +28,6 @@ public sealed class OrdersController(IDispatcher dispatcher) : ControllerBase
     }
 
     [HttpPost]
-    [Authorize(Roles = Permissions.CreateOrder)]
     public async Task<IActionResult> CreateOrderAsync([FromBody] OrderCreationScheme request, CancellationToken cancellation)
     {
         var result = await dispatcher.DispatchAsync(request, cancellation);
@@ -43,7 +42,6 @@ public sealed class OrdersController(IDispatcher dispatcher) : ControllerBase
     }
 
     [HttpPut("{id}")]
-    [Authorize(Roles = Permissions.UpdateOrder)]
     public async Task<IActionResult> UpdateOrderAsync(
         [FromBody] OrderModificationScheme request, [FromRoute] string id, CancellationToken cancellation)
     {
