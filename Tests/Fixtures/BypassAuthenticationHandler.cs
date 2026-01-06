@@ -12,10 +12,6 @@ public sealed class BypassAuthenticationHandler(IOptionsMonitor<AuthenticationSc
         {
             new Claim(ClaimTypes.Name, "vinder"),
             new Claim(ClaimTypes.NameIdentifier, "vinder"),
-
-            new Claim(ClaimTypes.Role, Permissions.ViewOrders),
-            new Claim(ClaimTypes.Role, Permissions.CreateOrder),
-            new Claim(ClaimTypes.Role, Permissions.UpdateOrder),
         };
 
         var identity = new ClaimsIdentity(claims, Scheme.Name);
