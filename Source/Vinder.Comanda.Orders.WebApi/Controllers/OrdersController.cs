@@ -6,6 +6,7 @@
 public sealed class OrdersController(IDispatcher dispatcher) : ControllerBase
 {
     [HttpGet]
+    [Stability(Stability.Stable)]
     public async Task<IActionResult> GetOrdersAsync([FromQuery] OrdersFetchParameters request, CancellationToken cancellation)
     {
         var result = await dispatcher.DispatchAsync(request, cancellation);
@@ -28,6 +29,7 @@ public sealed class OrdersController(IDispatcher dispatcher) : ControllerBase
     }
 
     [HttpPost]
+    [Stability(Stability.Stable)]
     public async Task<IActionResult> CreateOrderAsync([FromBody] OrderCreationScheme request, CancellationToken cancellation)
     {
         var result = await dispatcher.DispatchAsync(request, cancellation);
@@ -42,6 +44,7 @@ public sealed class OrdersController(IDispatcher dispatcher) : ControllerBase
     }
 
     [HttpPut("{id}")]
+    [Stability(Stability.Stable)]
     public async Task<IActionResult> UpdateOrderAsync(
         [FromBody] OrderModificationScheme request, [FromRoute] string id, CancellationToken cancellation)
     {
