@@ -6,6 +6,7 @@ global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.AspNetCore.Authorization;
 
 global using Vinder.Comanda.Orders.WebApi.Extensions;
+global using Vinder.Comanda.Orders.WebApi.Constants;
 global using Vinder.Comanda.Orders.Domain.Errors;
 
 global using Vinder.Comanda.Orders.Application.Payloads.Order;
